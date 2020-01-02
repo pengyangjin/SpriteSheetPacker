@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <project name="Build File"
+		 basedir="."
+		 default="makeSuperJar">
+	<tstamp prefix="build.">
+		<format property="_date"
+				pattern="yyyyMMdd-HHmmss"
+				locale="en"/>
+	</tstamp>
+	<target name="makeSuperJar"
+			description="description">
+	<jar destfile="libPacker.jar">
+
+<zipfileset src="ant.jar"/>
+<zipfileset src="avi.jar"/>
+<zipfileset src="cmykjpeg.jar"/>
+<zipfileset src="commons-exec-1.3.jar"/>
+<zipfileset src="commons-io-2.6.jar"/>
+<zipfileset src="dom4j-2.1.1.jar"/>
+<zipfileset src="ffdec_lib.jar"/>
+<zipfileset src="flamingo-6.2.jar"/>
+<zipfileset src="flashdebugger.jar"/>
+<zipfileset src="gif.jar"/>
+<zipfileset src="gnujpdf.jar"/>
+<zipfileset src="graphs.jar"/>
+<zipfileset src="jargs.jar"/>
+<zipfileset src="JavactiveX.jar"/>
+<zipfileset src="jl1.0.1.jar"/>
+<zipfileset src="jna-3.5.1.jar"/>
+<zipfileset src="jpacker.jar"/>
+<zipfileset src="jpproxy.jar"/>
+<zipfileset src="jsyntaxpane-0.9.5.jar"/>
+<zipfileset src="libJTask.jar"/>
+<zipfileset src="LZMA.jar"/>
+<zipfileset src="minimal-json-0.9.5.jar"/>
+<zipfileset src="nellymoser.jar"/>
+<zipfileset src="sfntly.jar"/>
+<zipfileset src="substance-6.2.jar"/>
+<zipfileset src="substance-flamingo-6.2.jar"/>
+<zipfileset src="tablelayout.jar"/>
+<zipfileset src="treetable.jar"/>
+<zipfileset src="trident-6.2.jar"/>
+<zipfileset src="ttf.jar"/>
+
+
+   </jar>
+	</target>
+</project>

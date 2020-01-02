@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Build File"
+		 basedir="."
+		 default="dirs">
+	
+	<property name = "source" value = "C:\Users\yangjin1\Desktop\texture"/>
+	<property name = "dist" value = "C:\Users\yangjin1\Desktop\out"/>
+	
+	<taskdef resource="net/sf/antcontrib/antlib.xml" classpath="ant-contrib-1.0b3.jar"/>
+	
+	<taskdef name="sspt" classname="com.itlwc.ant.tools.extend.SpriteSheetPackerTask" classpath="libJar.jar">
+		<classpath>
+			<fileset dir="lib" includes="*.jar"/>
+			<fileset dir="libs" includes="*.jar"/>
+		</classpath>
+	</taskdef>
+
+	<!-- 当source 是一个目录集的时候使用这个-->
+	<target name="dirs">
+		<for param="filepath">
+			<path>
+				<dirset dir="${source}" casesensitive="yes">
+					<include name="*"/>
+				</dirset>
+			</path>
+			<sequential>
+				<echo>@{filepath}</echo>
+				<sspt source="@{filepath}" dist="${dist}"/>
+			</sequential>
+		</for>
+	</target>
+	
+	<!-- 当source 是单个目录的时候使用这个-->
+	<target name="dir">
+		<sspt source="${source}" dist="${dist}"/>
+	</target>
+</project>
